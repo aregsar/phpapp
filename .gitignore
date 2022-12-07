@@ -1,0 +1,10 @@
+.phpunit.result.cache
+.phpunit.cache
+.php-cs-fixer.cache
+.php-cs-fixer.php
+.env
+.idea
+/composer.lock
+/phpunit.xml
+/build/
+/vendor/
