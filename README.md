@@ -26,9 +26,11 @@ function gh_create_private_remote_repo_and_clone_from_template_repo_phpapp() {
 
 Add the function to your bash configuration dotfile.
 
+## Create and clone with gh
+
 Login to github with gh.
 
-Call the function to create the repo and clone it.
+Call the bash function to create the repo and clone it.
 
 The argument is the name of the repo we want to create.
 
@@ -36,20 +38,23 @@ The argument is the name of the repo we want to create.
 gh_create_private_remote_repo_and_clone_from_template_repo_phpapp myphpapp
 ```
 
+Logout using gh.
+
 ## Initializing the project
 
-Once we cloned the repo we can install and configure phpunit.
+After we created and cloned the repo we need to install and configure phpunit.
 
 ```bash
-mv .env.example .env
-mv phpunit.xml.dist phpunit.xml
 composer require --dev phpunit/phpunit
-composer dump-autoload
+mv phpunit.xml.dist phpunit.xml
+mv .env.example .env
 ```
 
 ## Running tests
 
-We can run phpunit directly:
+We can run the example unit test
+
+using phpunit directly:
 
 ```bash
 vendor/bin/phpunit
@@ -59,6 +64,14 @@ Or with the composer script:
 
 ```bash
 composer test
+```
+
+## Running Code
+
+We can run the example code using the php cli.
+
+```bash
+php public/index.php
 ```
 
 ## Additional packages to install
