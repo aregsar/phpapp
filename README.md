@@ -40,9 +40,9 @@ gh_create_private_remote_repo_and_clone_from_template_repo_phpapp myphpapp
 
 Logout using gh.
 
-## Initializing the project
+## Installing phpunit
 
-After we created and cloned the repo we need to install and configure phpunit.
+After we created and cloned the repo we need to install the phpunit package.
 
 ```bash
 composer require --dev phpunit/phpunit
