@@ -46,8 +46,6 @@ After we created and cloned the repo we need to install and configure phpunit.
 
 ```bash
 composer require --dev phpunit/phpunit
-mv phpunit.xml.dist phpunit.xml
-mv .env.example .env
 ```
 
 ## Running tests
