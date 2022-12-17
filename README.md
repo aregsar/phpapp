@@ -40,12 +40,18 @@ gh_create_private_remote_repo_and_clone_from_template_repo_phpapp myphpapp
 
 Logout using gh.
 
-## Installing phpunit
+## Installing and configuring phpunit
 
 After we created and cloned the repo we need to install the phpunit package.
 
 ```bash
 composer require --dev phpunit/phpunit
+```
+
+Then in the project root rename phpunit.xml.dist configuration file to phpunit.xml
+
+```bash
+mv phpunit.xml.dist phpunit.xml
 ```
 
 ## Running tests
@@ -66,11 +72,11 @@ composer test
 
 ## Running Code
 
-This template includes the `index.php` bootstrap file in the project root and also include the `public/index.php` bootstrap file in the public subdirectory.
+This template includes the `index.php` bootstrap file in the project root and also includes the `public/index.php` bootstrap file in the public subdirectory.
 
 You can decide which one you want to use as your bootstrap file and remove the other.
 
-We can run the example code below using the php cli depending on which index.php file we are using:
+We can run our application using the php cli:
 
 ```bash
 # runs index.php in application root
@@ -80,7 +86,7 @@ php index.php
 php public/index.php
 ```
 
-Or we can run the code running a local php server and navigating to localhost:8000 or localhost:8000/public depending on which index.php file we are using:
+Or we can run the application using a local php server and navigating to localhost:8000 or localhost:8000/public
 
 ```bash
 # serves index.php in application root
