@@ -54,6 +54,8 @@ Then in the project root rename phpunit.xml.dist configuration file to phpunit.x
 mv phpunit.xml.dist phpunit.xml
 ```
 
+The configuration file autoloads the application for our tests.
+
 ## Running tests
 
 We can run the example unit test
