@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . "/vendor/autoload.php";
 
 // ini_set('display_errors', '1');
 // ini_set('display_startup_errors', '1');
@@ -22,7 +22,7 @@ try {
 
     //
     // load .env settings:
-    // $dotenv = Dotenv::createUnsafeImmutable(__DIR__ . '/../');
+    // $dotenv = Dotenv::createUnsafeImmutable(__DIR__);
     // $dotenv->load();
     // $appName = getenv('APP_NAME');
     //
@@ -30,7 +30,7 @@ try {
     //
     // logging
     // $logger = new Logger('log');
-    // $logger->pushHandler(new StreamHandler(__DIR__ . "/../logfile.log", Level::Debug));
+    // $logger->pushHandler(new StreamHandler(__DIR__ . "/logfile.log", Level::Debug));
     // $logger->info($appName);
     //
 

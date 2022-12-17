@@ -66,32 +66,64 @@ composer test
 
 ## Running Code
 
-We can run the example code using the php cli.
+This template includes the `index.php` bootstrap file in the project root and also include the `public/index.php` bootstrap file in the public subdirectory.
+
+You can decide which one you want to use as your bootstrap file and remove the other.
+
+We can run the example code below using the php cli depending on which index.php file we are using:
 
 ```bash
+# runs index.php in application root
+php index.php
+
+# runs public/index.php
 php public/index.php
 ```
 
-## Additional packages to install
+Or we can run the code running a local php server and navigating to localhost:8000 or localhost:8000/public depending on which index.php file we are using:
 
-The following are some of the most common packages used in PHP apps that extend the basic featurs of the language.
+```bash
+# serves index.php in application root
+php -S localhost:8000
 
-To load environment variables through the .env file:
+# serves public/index.php
+php -S localhost:8000 -t public/
+```
+
+## Adding package to support .env file loading
+
+Install the following package to load environment variables through the .env file.
 
 ```bash
 composer require vlucas/phpdotenv
 ```
 
-For logging:
+In the project root rename .env.example file to .env
+
+```bash
+mv .env.example .env
+```
+
+After installing the package you can uncomment code in the index.php file or public/index.php to load the .env file.
+
+## Adding package for logging
+
+Install the following package to use the monolog logger in your application.
 
 ```bash
 composer require monolog/monolog
 ```
 
-For error handling:
+After installing the package you can uncomment code in the index.php or public/index.php file that demonstrates usage of the logger.
+
+## Additional packages to install
+
+The following are other common packages used in PHP apps.
+
+For displaying error information during development for uncaught exceptions:
 
 ```bash
-composer require filp/whoops
+composer require --dev filp/whoops
 ```
 
 For making HTTP requests:
